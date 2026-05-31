@@ -293,7 +293,7 @@ productor.flush()
 
 URL:
 
-https://sonarqube.ingsoftware.lat/
+[https://sonarqube.ingsoftware.lat/](https://sonarcloud.io/project/overview?id=andre749_laboratorio_8_ing_software)
 
 ## Requisitos
 
@@ -312,29 +312,16 @@ Además, leer los comentarios incluidos en el archivo de configuración.
 ## sonar-project.properties
 
 ```properties
-# Poner las exclusiones de codigo que sean necesarias
-# (Las mismas de un git ignore de python, ts, java, etc)
-
-# Incluir la info de donde se ubican sus test
-# y su archivo de cobertura
-
-sonar.projectKey=Fabrizzio_Vilchez_t1
+sonar.projectKey=andre749_laboratorio_8_ing_software
+sonar.organization=andre749
 
 sonar.sources=.
-
-sonar.exclusions=.venv/**, **/tests/**
-
-sonar.host.url=https://sonarqube.ingsoftware.lat/
-
-sonar.token=sqa_4e296de25b56b315988b9a9dfd137d2b4f97e7c3
-
-# CONFIGURACIÓN DE PRUEBAS Y COBERTURA
+sonar.exclusions=.venv/**,tests/**,**/__pycache__/**,*.pyc
 
 sonar.tests=.
-
-sonar.test.inclusions=**/tests/**, **test_*.py
-
+sonar.test.inclusions=**/tests/**,**test_*.py
 sonar.python.coverage.reportPaths=coverage.xml
+sonar.python.version=3.12
 ```
 
 ---
